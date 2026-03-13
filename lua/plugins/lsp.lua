@@ -128,6 +128,9 @@ return {
           -- Switch between source and header when using clangd
           map('<leader>cs', ':LspClangdSwitchSourceHeader<CR>', 'Clangd switch source/header')
 
+          -- Show diagnostic message in floating window
+          map('<leader>d', ':lua vim.diagnostic.open_float()<CR>', 'Show diagnostic message in floating window')
+
           -- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
           ---@param client vim.lsp.Client
           ---@param method vim.lsp.protocol.Method
