@@ -42,6 +42,10 @@ vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
       else
         vim.opt.expandtab = true
       end
+    elseif string.match(buf_name, '.lua$') then
+      vim.opt.tabstop = 2
+      vim.opt.shiftwidth = 2
+      vim.opt.expandtab = true
     end
   end,
 })
