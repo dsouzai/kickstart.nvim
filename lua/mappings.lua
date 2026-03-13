@@ -46,6 +46,11 @@ local function toggle_center_mode()
   end
 end
 
+local function toggle_expandtab()
+  vim.g.expandtab = not vim.g.expandtab
+  vim.opt.expandtab = vim.g.expandtab
+end
+
 -- treesitter
 vim.keymap.set('n', '<leader>tv', ':NvimTreeToggle<CR>', { desc = 'Toggle treeview' })
 vim.keymap.set('n', '<leader>tf', ':NvimTreeFocus<CR>', { desc = 'Focus on treeview ' })
@@ -97,6 +102,9 @@ vim.keymap.set('n', '<leader>ll', toggle_line_lock_mode, { desc = 'Toggle lock l
 
 -- "center mode"
 vim.keymap.set('n', '<leader>cm', toggle_center_mode, { desc = 'Toggle center mode' })
+
+-- Toggle expandtab
+vim.keymap.set('n', '<leader>tt', toggle_expandtab, { desc = 'Toggle expand tab' })
 
 ------------------------------------------------------------------------------------------
 -- insert mode overrides
