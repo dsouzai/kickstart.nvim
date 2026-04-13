@@ -90,8 +90,10 @@ if vim.opt.diff:get() then
   vim.keymap.set('n', '<C-c>', ':qall<CR>', { desc = 'Close all buffers in diff mode' })
 
   -- diff navigation
-  vim.keymap.set('n', ']c', ']czt', { desc = 'Next change followed by zt' })
-  vim.keymap.set('n', '[c', '[czt', { desc = 'Prev change followed by zt' })
+  --vim.keymap.set('n', ']c', ']czt', { desc = 'Next change followed by zt' })
+  --vim.keymap.set('n', '[c', '[czt', { desc = 'Prev change followed by zt' })
+  vim.keymap.set('n', 'J', ']czt', { desc = 'Next change followed by zt' })
+  vim.keymap.set('n', 'K', '[czt', { desc = 'Prev change followed by zt' })
 
   -- enter "center mode"
   -- toggle_center_mode()
