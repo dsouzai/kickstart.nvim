@@ -106,7 +106,9 @@ return {
           map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 
           -- Information under curstor in hover pane
-          map('gh', vim.lsp.buf.hover, 'SHow information under curstor in hover pane')
+          map('gh', function()
+            vim.lsp.buf.hover { border = 'rounded' }
+          end, 'Show information under curstor in hover pane')
 
           -- Go to definition
           map('gd', vim.lsp.buf.definition, '[G]o to [D]efinition')
