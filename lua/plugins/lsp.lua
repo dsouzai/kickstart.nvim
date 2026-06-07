@@ -237,6 +237,7 @@ return {
             'clangd',
             '--header-insertion=never',
             '--function-arg-placeholders=0',
+            '--background-index=false',
           },
         },
         pyright = {},
